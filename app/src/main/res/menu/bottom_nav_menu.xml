@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home" />
+
+
+    <item
+        android:id="@+id/menu_compass"
+        android:icon="@drawable/qibla_nav"
+        android:title="Compass" />
+
+    <item
+        android:id="@+id/menu_prayer"
+        android:icon="@drawable/mosque"
+        android:title="Prayer" />
+
+    <item
+        android:id="@+id/menu_Sehri_time"
+        android:icon="@drawable/baseline_calendar_month_24"
+        android:title="Calender" />
+
+    <item
+        android:id="@+id/menu_calendar"
+        android:icon="@drawable/baseline_settings_24"
+        android:title="Setting"
+        />
+
+</menu>

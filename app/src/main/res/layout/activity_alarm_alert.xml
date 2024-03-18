@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#16225F"
+    tools:context=".AlarmAlertActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/frame" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        >
+
+        <!--        <ImageView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="start"-->
+        <!--            android:background="@drawable/button_background"-->
+        <!--            android:layout_marginEnd="10dp"-->
+        <!--            android:src="@drawable/baseline_chevron_left_24"-->
+        <!--            />-->
+
+        <TextView
+            android:id="@+id/namz_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="Alarm"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/currentTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:text="Current Time"
+        android:textColor="#F5F5F8"
+        android:fontFamily="@font/montserrat"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/currentTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currentTimeTextView"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:text="00:00:00 AM"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/alarmText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currentTimeText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/white"
+        android:text="Alarm Ringing!"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alarmText"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/logo"
+    android:layout_marginTop="20sp"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/snoozeAlarmButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button_background3"
+        android:drawableStart="@drawable/baseline_alarm_off_24"
+        android:drawablePadding="10dp"
+        android:paddingHorizontal="10dp"
+        android:text="Snooze"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/stopAlarmButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:background="@drawable/button_background1"
+        android:drawableStart="@drawable/clock"
+        android:drawablePadding="8dp"
+        android:layout_marginEnd="20sp"
+        android:paddingHorizontal="10dp"
+        android:text="Stop Alarm"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
+
+
+</RelativeLayout>

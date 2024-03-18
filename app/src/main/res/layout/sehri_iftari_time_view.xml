@@ -1,0 +1,78 @@
+<LinearLayout android:id="@+id/linearLayout5"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#F0F0F0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/idOfDays"
+        android:layout_width="38dp"
+        android:layout_height="36dp"
+        android:fontFamily="@font/montserrat"
+        android:text="1"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:background="#16225F"
+        android:textSize="12sp"
+        android:layout_marginHorizontal="1dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dateOfRamadan"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/montserrat"
+        android:text="1-03-2024"
+        android:gravity="center"
+        android:background="#FFFFFF"
+        android:textColor="#16225F"
+        android:textSize="12sp"
+        android:layout_marginHorizontal="1dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dayOfRamadan"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/montserrat"
+        android:text="Mon"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:textColor="#16225F"
+        android:textSize="12sp"
+        android:layout_marginHorizontal="1dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sehriTime"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/montserrat"
+        android:text="3 : 45 am"
+        android:gravity="center"
+        android:textColor="#16225F"
+        android:textSize="12sp"
+        android:background="#FFFFFF"
+        android:layout_marginHorizontal="1dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/iftariTime"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="1dp"
+        android:fontFamily="@font/montserrat"
+        android:text="6 : 45 pm"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:textColor="#16225F"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</LinearLayout>

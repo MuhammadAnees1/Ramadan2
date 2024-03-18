@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#16225F"
+    tools:context=".NotificationTimeFragment">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <!--            <TextView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_alignParentTop="true"-->
+        <!--                android:layout_alignParentBottom="true"-->
+        <!--                android:layout_marginStart="10dp"-->
+        <!--                android:fontFamily="@font/montserrat"-->
+        <!--                android:gravity="center"-->
+        <!--                android:text="Notification"-->
+        <!--                android:textColor="#FFFFFF"-->
+        <!--                android:textSize="18sp"-->
+        <!--                android:textStyle="bold" />-->
+
+        <!--            <Switch-->
+        <!--                android:id="@+id/notification_off_on_Switch"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_alignParentEnd="true"-->
+        <!--                android:layout_marginEnd="10dp"-->
+        <!--                android:minWidth="48dp"-->
+        <!--                android:minHeight="48dp"-->
+        <!--                android:thumbTint="#EC1111"-->
+        <!--                android:trackTint="#FFFFFF"-->
+        <!--                tools:ignore="UseSwitchCompatOrMaterialXml" />-->
+
+
+        <TextView
+            android:id="@+id/time_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20sp"
+            android:gravity="center"
+            android:hint="-- -- --"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="18sp" />
+
+
+        <ImageView
+            android:id="@+id/min_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/time_TextView"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/button_background1"
+            android:src="@drawable/subtract"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <NumberPicker
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/time_TextView"
+            android:layout_marginBottom="40dp"
+            android:layout_toStartOf="@+id/plus_button"
+            android:layout_toEndOf="@+id/min_button"
+            android:background="@drawable/input_background"
+            android:gravity="center"
+            />
+
+        <ImageView
+            android:id="@+id/plus_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/time_TextView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/button_background1"
+            android:src="@drawable/baseline_add_24"
+            app:layout_constraintBottom_toBottomOf="@+id/editText"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/confirm_alarm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/button_background3"
+            android:text="confirm"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <!--            <Switch-->
+        <!--                android:id="@+id/notification_off_on_Switch"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_alignParentEnd="true"-->
+        <!--                android:layout_marginEnd="10dp"-->
+        <!--                android:minWidth="48dp"-->
+        <!--                android:minHeight="48dp"-->
+        <!--                android:thumbTint="#EC1111"-->
+        <!--                android:trackTint="#FFFFFF"-->
+        <!--                tools:ignore="UseSwitchCompatOrMaterialXml" />-->
+
+
+</RelativeLayout>

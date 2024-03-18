@@ -1,0 +1,76 @@
+{
+  "prayerTimes": [
+    {
+      "date": "Mar 06 2024",
+      "fajr": "5:07 AM",
+      "sunrise": "6:30 AM",
+      "dhuhr": "12:19 PM",
+      "asr": "4:27 PM",
+      "maghrib": "6:09 PM",
+      "isha": "7:31 PM"
+    },
+    {
+      "date": "Mar 07 2024",
+      "fajr": "5:06 AM",
+      "sunrise": "6:28 AM",
+      "dhuhr": "12:19 PM",
+      "asr": "4:28 PM",
+      "maghrib": "6:09 PM",
+      "isha": "7:32 PM"
+    },
+    {
+      "date": "Mar 08 2024",
+      "fajr": "07:29 PM",
+      "sunrise": "07:08 AM",
+      "dhuhr": "07:28 PM",
+      "asr": "07:11 PM",
+      "maghrib": "07:13 PM",
+      "isha": "03:55 PM"
+    },
+    {
+      "date": "Mar 09 2024",
+      "fajr": "02:14 PM",
+      "sunrise": "6:26 AM",
+      "dhuhr": "02:12 PM",
+      "asr": "4:30 PM",
+      "maghrib": "6:10 PM",
+      "isha": "7:34 PM"
+    },
+    {
+      "date": "Mar 10 2024",
+      "fajr": "06:48 AM",
+      "sunrise": "6:25 AM",
+      "dhuhr": "12:17 PM",
+      "asr": "4:31 PM",
+      "maghrib": "6:11 PM",
+      "isha": "7:35 PM"
+    },
+    {
+      "date": "Mar 11 2024",
+      "fajr": "05:02 AM",
+      "sunrise": "6:24 AM",
+      "dhuhr": "12:17 PM",
+      "asr": "4:32 PM",
+      "maghrib": "6:12 PM",
+      "isha": "7:36 PM"
+    },
+    {
+      "date": "Mar 12 2024",
+      "fajr": "5:01 AM",
+      "sunrise": "6:23 AM",
+      "dhuhr": "12:16 PM",
+      "asr": "4:33 PM",
+      "maghrib": "6:12 PM",
+      "isha": "7:37 PM"
+    },
+    {
+      "date": "Mar 13 2024",
+      "fajr": "5:00 AM",
+      "sunrise": "6:22 AM",
+      "dhuhr": "12:16 PM",
+      "asr": "4:34 PM",
+      "maghrib": "6:13 PM",
+      "isha": "7:38 PM"
+    }
+  ]
+}
