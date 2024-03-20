@@ -128,85 +128,77 @@
         android:layout_marginTop="20dp"
         android:text="Cancel Alarm"/>
 
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/alarmTimeTextView"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="@font/montserrat"
-            android:text="Select for repeat alarm "
-            android:textColor="#16225F"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent" />
-
-
-        <CheckBox
-            android:id="@+id/sundayCheckbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView12"
-            android:layout_marginStart="20dp"
-            android:text="Sunday"
-            android:textColor="#16225F" />
-
-        <CheckBox
-            android:id="@+id/mondayCheckbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/sundayCheckbox"
-            android:layout_marginStart="20dp"
-            android:text="Monday"
-            android:textColor="#16225F" />
-
-        <CheckBox
-            android:id="@+id/tuesdayCheckbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/mondayCheckbox"
-            android:layout_marginStart="20dp"
-            android:text="Tuesday"
-            android:textColor="#16225F" />
-        <CheckBox
-            android:id="@+id/wednesdayCheckbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tuesdayCheckbox"
-            android:layout_marginStart="20dp"
-            android:text="Wednesday"
-            android:textColor="#16225F" />
-        <CheckBox
-            android:id="@+id/thursdayCheckbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/wednesdayCheckbox"
-            android:layout_marginStart="20dp"
-            android:text="Thursday"
-            android:textColor="#16225F" />
-
-        <CheckBox
-            android:id="@+id/fridayCheckbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/thursdayCheckbox"
-            android:layout_marginStart="20dp"
-            android:text="Friday"
-            android:textColor="#16225F" />
-
-
-
-        <CheckBox
-            android:id="@+id/saturdayCheckbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/fridayCheckbox"
-            android:layout_marginStart="20dp"
-            android:text="Saturday"
-            android:textColor="#16225F" />
+<!--        <TextView-->
+<!--            android:id="@+id/textView12"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/alarmTimeTextView"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:fontFamily="@font/montserrat"-->
+<!--            android:text="Select for repeat alarm "-->
+<!--            android:textColor="#16225F"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+<!--        <CheckBox-->
+<!--            android:id="@+id/sundayCheckbox"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/textView12"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:text="Sunday"-->
+<!--            android:textColor="#16225F" />-->
+<!--        <CheckBox-->
+<!--            android:id="@+id/mondayCheckbox"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/sundayCheckbox"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:text="Monday"-->
+<!--            android:textColor="#16225F" />-->
+<!--        <CheckBox-->
+<!--            android:id="@+id/tuesdayCheckbox"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/mondayCheckbox"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:text="Tuesday"-->
+<!--            android:textColor="#16225F" />-->
+<!--        <CheckBox-->
+<!--            android:id="@+id/wednesdayCheckbox"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/tuesdayCheckbox"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:text="Wednesday"-->
+<!--            android:textColor="#16225F" />-->
+<!--        <CheckBox-->
+<!--            android:id="@+id/thursdayCheckbox"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/wednesdayCheckbox"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:text="Thursday"-->
+<!--            android:textColor="#16225F" />-->
+<!--        <CheckBox-->
+<!--            android:id="@+id/fridayCheckbox"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/thursdayCheckbox"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:text="Friday"-->
+<!--            android:textColor="#16225F" />-->
+<!--        <CheckBox-->
+<!--            android:id="@+id/saturdayCheckbox"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/fridayCheckbox"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:text="Saturday"-->
+<!--            android:textColor="#16225F" />-->
 
     </RelativeLayout>
 

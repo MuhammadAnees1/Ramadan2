@@ -3,12 +3,12 @@ plugins {
 }
 
 android {
-    namespace 'com.example.ramadan1'
+    namespace 'com.softwareflare.QiblaPrayer'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.ramadan1"
-        minSdk 24
+        applicationId "com.softwareflare.QiblaPrayer"
+        minSdk 19
         targetSdk 34
         versionCode 1
         versionName "1.0"

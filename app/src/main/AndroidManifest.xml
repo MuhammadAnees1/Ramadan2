@@ -30,7 +30,6 @@
         <activity
             android:name=".Custom_alarm_activity"
             android:exported="false"
-            android:label="@string/title_activity_custom_alarm"
             android:theme="@style/Theme.Ramadan1" />
         <activity
             android:name=".AlarmAlertActivity"
