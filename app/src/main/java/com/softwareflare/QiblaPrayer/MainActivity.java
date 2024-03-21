@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     private static final int LOCATION_SETTINGS_REQUEST_CODE = 1002;
     private ProgressDialog progressDialog;
     private LocationManager locationManager;
+    static boolean backrequired =false;
     Fragment currentFragment;
     private boolean isLocationUpdated = false;
     Location currentLocation;
@@ -43,6 +44,11 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         //        startService(new Intent(this, AlarmService.class));
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
+        if(backrequired){
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new NimazTimeFragment()).commit();
+            bottomNavigationView.setSelectedItemId(R.id.menu_prayer);
+            backrequired = false;
+        }
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {

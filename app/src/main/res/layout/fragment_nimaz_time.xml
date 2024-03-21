@@ -155,8 +155,8 @@
             <ImageView
                 android:id="@+id/fajar_time_alarm_0ff"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:visibility="gone"
+                android:layout_height="wrap_content"
                 android:src="@drawable/baseline_volume_up_24"
                 tools:ignore="UseSwitchCompatOrMaterialXml" />
 

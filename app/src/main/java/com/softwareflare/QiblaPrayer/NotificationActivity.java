@@ -2,7 +2,6 @@
 package com.softwareflare.QiblaPrayer;
 
 
-import static android.app.PendingIntent.getActivity;
 import static android.service.controls.ControlsProviderService.TAG;
 
 import android.annotation.SuppressLint;
@@ -25,8 +24,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.google.firebase.crashlytics.buildtools.reloc.com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -207,7 +206,17 @@ public class NotificationActivity extends AppCompatActivity {
         backbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                if(uniquecode == 1 || uniquecode == 2 || uniquecode == 3 || uniquecode == 4 || uniquecode == 5 ) {
+                    Intent intent = new Intent(NotificationActivity.this, MainActivity.class);
+                    MainActivity.backrequired = true;
+                    startActivity(intent);
+                }
+                else {
+                    Intent intent = new Intent(NotificationActivity.this, MainActivity.class);
+                    MainActivity.backrequired = false;
+                    startActivity(intent);
+                }
+
             }
         });
 

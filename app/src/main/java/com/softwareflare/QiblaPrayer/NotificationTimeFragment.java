@@ -15,13 +15,15 @@ import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-import com.google.firebase.crashlytics.buildtools.reloc.com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.text.ParseException;
@@ -219,14 +221,24 @@ public class NotificationTimeFragment extends BottomSheetDialogFragment {
 
             }
         });
+
+
+
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getActivity().onBackPressed();
             }
         });
+
+
+
+
+
         return view;
     }
+
+
     private void incrementNumberPicker () {
         if (numberPicker.getValue() < numberPicker.getMaxValue()) {
             int minutesToAdd = 1;
@@ -358,8 +370,7 @@ public class NotificationTimeFragment extends BottomSheetDialogFragment {
         // Retrieve the JSON string from SharedPreferences
         String json = sharedPreferences.getString("prayer_map", "");
         // Convert the JSON string back to a HashMap
-        Gson gson = new Gson();
-        Type type = new TypeToken<HashMap<String, Integer>>(){}.getType();
+        Gson gson = new Gson();Type type = new TypeToken<HashMap<String, Integer>>(){}.getType();
         return gson.fromJson(json, type);
     }
     private void saveAlarmState(String key, boolean isAlarmOn, Fragment fragment) {

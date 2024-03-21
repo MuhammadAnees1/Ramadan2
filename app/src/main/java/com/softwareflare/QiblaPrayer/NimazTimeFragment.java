@@ -7,6 +7,7 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -85,6 +86,37 @@ public class NimazTimeFragment extends Fragment {
         linearLayout5 = view.findViewById(R.id.linearLayout6);
         location_place = view.findViewById(R.id.location_place);
 
+        boolean fajrAlarmEnabled = retrievePrayerState(1, getContext());
+        boolean dhuhrAlarmEnabled = retrievePrayerState(2, getContext());
+        boolean asrAlarmEnabled = retrievePrayerState(3, getContext());
+        boolean maghribAlarmEnabled = retrievePrayerState(4, getContext());
+        boolean ishaAlarmEnabled = retrievePrayerState(5, getContext());
+
+        if(fajrAlarmEnabled){
+            fajar_time_alarm.setImageResource(R.drawable.baseline_volume_up_24);
+        }else {
+            fajar_time_alarm.setImageResource(R.drawable.baseline_volume_off_24);
+        }
+        if (dhuhrAlarmEnabled) {
+            dhuhr_time_alarm_0ff.setImageResource(R.drawable.baseline_volume_up_24);
+        } else {
+            dhuhr_time_alarm_0ff.setImageResource(R.drawable.baseline_volume_off_24);
+        }
+        if (asrAlarmEnabled) {
+            asr_time_alarm_0ff.setImageResource(R.drawable.baseline_volume_up_24);
+        } else {
+            asr_time_alarm_0ff.setImageResource(R.drawable.baseline_volume_off_24);
+        }
+        if (maghribAlarmEnabled) {
+            maghrib_time_alarm_0ff.setImageResource(R.drawable.baseline_volume_up_24);
+        } else {
+            maghrib_time_alarm_0ff.setImageResource(R.drawable.baseline_volume_off_24);
+        }
+        if (ishaAlarmEnabled) {
+            isha_time_alarm_0ff.setImageResource(R.drawable.baseline_volume_up_24);
+        } else {
+            isha_time_alarm_0ff.setImageResource(R.drawable.baseline_volume_off_24);
+        }
         fajar_time_alarm.setEnabled(false);
         fajar_time_alarm_0ff.setEnabled(false);
         dhuhr_Time_Alarm.setEnabled(false);
@@ -573,5 +605,13 @@ public class NimazTimeFragment extends Fragment {
                     else {
                         return timeWithSuffix.trim();
                     }
+    }
+
+
+    private boolean retrievePrayerState(int prayerName, Context context) {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        // Retrieve the state of the specified prayer
+        // Provide a default value in case the preference is not found
+        return sharedPreferences.getBoolean("prayer_" + prayerName, false);
     }
 }

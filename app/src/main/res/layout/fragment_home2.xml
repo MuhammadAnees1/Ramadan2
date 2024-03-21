@@ -67,7 +67,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/montserrat"
-                    android:text="Sehir Iftar Times"
+                    android:text="Sehri Iftar Times"
                     android:textColor="#16225F"
                     android:gravity="center"
                     android:textSize="18sp"
