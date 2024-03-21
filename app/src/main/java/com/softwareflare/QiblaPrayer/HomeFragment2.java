@@ -16,6 +16,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -101,9 +102,20 @@ public class HomeFragment2 extends Fragment {
         activity.checkLocationPermission();
         currentLocation = activity.currentLocation;
         loadData(currentLocation);
-        isiftariAlarmSet = loadAlarmState("Iftari_Alarm");
 
-        if (isiftariAlarmSet) {
+
+        boolean isSehriEnabled = retrievePrayerState(6, getContext());
+        boolean isiftariEnabled = retrievePrayerState(7, getContext());
+
+        if (isSehriEnabled) {
+            sehriTime_alarm.setImageResource(R.drawable.baseline_notifications_active_24);
+        }
+        else {
+            sehriTime_alarm.setImageResource(R.drawable.baseline_notifications_none_24);
+        }
+        Log.d(TAG, "onCreateView hahahah: "+isSehriEnabled);
+
+        if (isiftariEnabled) {
             iftariTime_alarm.setImageResource(R.drawable.baseline_notifications_active_24);
         } else {
             iftariTime_alarm.setImageResource(R.drawable.baseline_notifications_none_24);
@@ -444,5 +456,10 @@ public class HomeFragment2 extends Fragment {
         dialog.show();
     }
 
-
+    private boolean retrievePrayerState(int prayerName, Context context) {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        // Retrieve the state of the specified prayer
+        // Provide a default value in case the preference is not found
+        return sharedPreferences.getBoolean("prayer_" + prayerName, false);
+    }
 }

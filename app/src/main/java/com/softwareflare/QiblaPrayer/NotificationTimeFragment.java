@@ -209,6 +209,8 @@ public class NotificationTimeFragment extends BottomSheetDialogFragment {
                 Toast.makeText(getContext(), "Alarm set for: " + timeString, Toast.LENGTH_SHORT).show();
                 saveTimeStringToSharedPreferences(getContext(), timeString);
                 saveAlarmState("pre_alarm", true, NotificationTimeFragment.this);
+                savePrayerState(alarmCode, true, getContext());
+
 
                 // Remove the current fragment and pop back the stack
                 FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
@@ -366,4 +368,12 @@ public class NotificationTimeFragment extends BottomSheetDialogFragment {
         editor.putBoolean(key, isAlarmOn);
         editor.apply();
 }
+
+    private void savePrayerState(int prayerName, boolean isEnabled, Context context) {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean("prayer_" + prayerName, isEnabled);
+        Log.d(TAG, "Prayer: " + prayerName + ", Enabled: " + isEnabled);
+        editor.apply();
+    }
 }

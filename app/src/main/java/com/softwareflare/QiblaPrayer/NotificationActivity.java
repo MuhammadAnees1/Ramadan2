@@ -240,8 +240,10 @@ public class NotificationActivity extends AppCompatActivity {
                 AlarmHelper.cancelAlarm(getApplicationContext(), uniquecode);
 
                 updatePreferences();
+                savePrayerState(uniquecode, false, getApplicationContext());
                 // Remove the pre-alarm time string from SharedPreferences
                 removeTimeStringFromSharedPreferences(getApplicationContext());
+
                 timer_textView.setText("0");
                 pre_alarm_layout_deleted.setVisibility(View.GONE);
             }
@@ -446,6 +448,13 @@ public class NotificationActivity extends AppCompatActivity {
 
         // Save the JSON string to SharedPreferences
         editor.putString("prayer_map", json);
+        editor.apply();
+    }
+    private void savePrayerState(int prayerName, boolean isEnabled, Context context) {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean("prayer_" + prayerName, isEnabled);
+        Log.d(TAG, "Prayer: " + prayerName + ", Enabled: " + isEnabled);
         editor.apply();
     }
 }
